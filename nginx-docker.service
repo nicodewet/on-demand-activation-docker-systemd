@@ -1,0 +1,8 @@
+[Unit]
+Description=nginx container
+
+[Service]
+ExecStart=/usr/bin/docker start -a nginx8080
+ExecStartPost=/bin/sleep 1
+
+ExecStop=/usr/bin/docker stop nginx8080

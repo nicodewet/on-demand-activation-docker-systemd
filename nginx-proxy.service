@@ -1,0 +1,6 @@
+[Unit]
+Requires=nginx-docker.service
+After=nginx-docker.service
+
+[Service]
+ExecStart=/lib/systemd/systemd-socket-proxyd 127.0.0.1:8080
